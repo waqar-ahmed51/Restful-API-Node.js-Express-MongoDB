@@ -1,10 +1,18 @@
 const express = require("express");
-const { Mongoose } = require("mongoose");
 const app = express();
 const mongoose=require('mongoose');
+const bodyParser=require('body-parser');
 require('dotenv/config');
 
+//Converting the required data to json
+app.use(bodyParser.json());
+
 // App is ready now
+
+//Import Routes
+const postRoute=require('./routes/posts');
+app.use('/posts',postRoute);
+
 
 //Middlewares in Express - something in middle works when some hits
 //Example - authanticate user before any operation
@@ -16,10 +24,6 @@ require('dotenv/config');
 app.get('/', (req, res)=>{
  res.send("Home Page");
 });
-
-app.get('/posts', (req, res)=>{
-    res.send("Post Page");
-   });
 
 //Connecting to Mongodb
 mongoose.connect(process.env.DB_CONNECTION, console.log('connected to MongoDB'));
