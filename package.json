@@ -1,0 +1,25 @@
+{
+  "name": "restful-api-node.js-express-mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waqar-ahmed51/Restful-API-Node.js-Express-MongoDB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/waqar-ahmed51/Restful-API-Node.js-Express-MongoDB/issues"
+  },
+  "homepage": "https://github.com/waqar-ahmed51/Restful-API-Node.js-Express-MongoDB#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.7",
+    "nodemon": "^2.0.19"
+  }
+}
