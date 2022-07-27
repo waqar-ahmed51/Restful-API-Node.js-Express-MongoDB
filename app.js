@@ -24,7 +24,7 @@ app.use('/products',productsRoute);
 
 //Routes Home
 app.get('/', (req, res)=>{
- res.send("Home Page");
+ res.send("Home Page - Product Rest API");
 });
 
 //Connecting to Mongodb - Cloud path is in .env file

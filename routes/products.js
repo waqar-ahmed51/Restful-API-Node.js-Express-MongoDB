@@ -2,13 +2,14 @@
 const express = require("express");
 //Imoort Router from Express
 const router = express.Router();
-//Post Schama for MongoDB
+//Product Schama for MongoDB
 const Product = require('../models/Product');
 
 // Getting all the Products
 router.get('/', async (req, res)=>{
+    // res.send("Product Page - Shows JSON");
     try {
-        const products= await await Product.find();
+        const products= await Product.find();
         res.json(products);
     } catch (error) {
         res.json({messge: error})
@@ -18,13 +19,21 @@ router.get('/', async (req, res)=>{
 //Submitting a Product
 router.post('/', async (req,res)=>{
     const product = new Product({
-        // title: req.body.title,
-        // description: req.body.description
+        id: req.body.id,
+        title: req.body.title,
+        desc: req.body.desc,
+        img: req.body.img,
+        price: req.body.price,
+        priceQuantity:req.body.priceQuantity,
+        quantity:req.body.quantity,
+        category:req.body.category,
+        popular:req.body.popular,
+        "Main Features": req.body["Main Features"],
     });
     try {
         const submitProduct = await product.save();
         res.json(submitProduct);    
-    } catch (eerrorrr) {
+    } catch (error) {
         res.json({messge: error})
     }
 });
@@ -42,7 +51,7 @@ router.get('/:productId', async (req,res)=>{
 // Delete a Product
 router.delete('/:productId', async (req,res)=>{
     try {
-        const deleteProduct = await Post.remove({_id:req.params.productId});
+        const deleteProduct = await Product.remove({_id:req.params.productId});
         res.json(deleteProduct);
     } catch (error) {
         res.json({messge: error})
@@ -52,11 +61,10 @@ router.delete('/:productId', async (req,res)=>{
 // Update a Product
 router.patch('/:productId', async (req,res)=>{
     try {
-        const updateProduct = await Post.updateOne({_id:req.params.productId}, {$set : {title: req.body.title}});
+        const updateProduct = await Product.updateOne({_id:req.params.productId}, {$set : {title: req.body.title}});
         res.json(updateProduct);
     } catch (error) {
         res.json({messge: error})
     }
 });
-
    module.exports = router;
