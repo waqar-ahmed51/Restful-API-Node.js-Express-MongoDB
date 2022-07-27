@@ -5,8 +5,14 @@ const app = express();
 //Import .env file for MongoDB Link
 require('dotenv/config');
 
+//Import Cors
+const cors=require('cors');
+
 //Import MongoDB
 const mongoose=require('mongoose');
+
+//Middleware for cross domain fetching - npm install cors
+app.use(cors());
 
 //Import bodyParser - Converting the required data to json
 const bodyParser = require('body-parser');
