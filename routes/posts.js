@@ -22,8 +22,8 @@ router.post('/', async (req,res)=>{
         description: req.body.description
     });
     try {
-    const savedPost = await post.save();
-    res.json(savedPost);    
+        const savedPost = await post.save();
+        res.json(savedPost);    
     } catch (eerrorrr) {
         res.json({messge: error})
     }
@@ -33,7 +33,7 @@ router.post('/', async (req,res)=>{
 router.get('/:postId', async (req,res)=>{
     try {
         const post = await Post.findById(req.params.postId);
-    res.json(post);
+        res.json(post);
     } catch (error) {
         res.json({messge: error})
     }
@@ -43,7 +43,17 @@ router.get('/:postId', async (req,res)=>{
 router.delete('/:postId', async (req,res)=>{
     try {
         const deletePost = await Post.remove({_id:req.params.postId});
-    res.json(post);
+        res.json(deletePost);
+    } catch (error) {
+        res.json({messge: error})
+    }
+});
+
+// Update a post
+router.patch('/:postId', async (req,res)=>{
+    try {
+        const updatePost = await Post.updateOne({_id:req.params.postId}, {$set : {title: req.body.title}});
+        res.json(updatePost);
     } catch (error) {
         res.json({messge: error})
     }
