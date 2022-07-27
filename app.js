@@ -21,8 +21,7 @@ app.get('/', (req, res)=>{
  res.send("Home Page");
 });
 
-//Connecting to Mongodb
-//Cloud path is in .env file
+//Connecting to Mongodb - Cloud path is in .env file
 mongoose.connect(process.env.DB_CONNECTION, console.log('Connected to MongoDB!'));
 
 //Start listening to the server
