@@ -10,7 +10,7 @@ Build a Restful API with Node.js, Express.js, and MongoDB. This repository conta
         "id": 0,
         "title": "MACBOOK PRO 13-inch ---- Updated",
         "desc": "M2 is the next generation of Apple silicon. Its 8-core CPU lets you zip through everyday tasks like creating documents and presentations,         or take on more intensive workflows like developing in Xcode or mixing tracks in Logic Pro.",
-        "img": "https://149426355.v2.pressablecdn.com/wp-content/uploads/2020/05/13pro-keyboard.jpg",
+        "img": "13pro-keyboard.jpg",
         "price": 320000,
         "priceQuantity": 320000,
         "quantity": 1,
@@ -29,7 +29,9 @@ Build a Restful API with Node.js, Express.js, and MongoDB. This repository conta
 
  
  - All requests tested through POSTMAN
- 
+
+ <img width="1669" alt="Screenshot 2022-07-28 at 6 12 40 PM" src="https://user-images.githubusercontent.com/54082156/181513701-48372b77-0ec6-4206-953c-a35237e40f87.png">
+
  
  
  .env - contain database details this file made public for learning purposes.
