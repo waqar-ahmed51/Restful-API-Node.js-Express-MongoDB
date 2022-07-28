@@ -7,19 +7,16 @@ Build a Restful API with Node.js, Express.js, and MongoDB. This repository conta
  - Product JSON Sample, used for this repository.
  
   {
-        "_id": "62e1767bc80df0cf2e929b6b",
         "id": 0,
         "title": "MACBOOK PRO 13-inch ---- Updated",
-        "desc": "M2 is the next generation of Apple silicon. Its 8-core CPU lets you zip through everyday tasks like creating documents and presentations,         or take on more intensive workflows like developing in Xcode or mixing tracks in Logic Pro.",
+        "desc": "M2 is the next generation of Apple silicon. Its 8-core CPU lets you zip through everyday tasks like creating documents and presentations,          or take on more intensive workflows like developing in Xcode or mixing tracks in Logic Pro.",
         "img": "13pro-keyboard.jpg",
         "price": 320000,
         "priceQuantity": 320000,
         "quantity": 1,
         "category": "laptops",
         "popular": "yes",
-        "Main Features": "8-Core CPU | 10-Core GPU",
-        "date": "2022-07-27T17:31:39.052Z",
-        "__v": 0
+        "Main Features": "8-Core CPU | 10-Core GPU"
     }
     
   
