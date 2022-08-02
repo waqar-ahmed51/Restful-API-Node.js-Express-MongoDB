@@ -18,7 +18,7 @@ app.use(cors());
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
-//Import products.js routesr
+//Import products.js routes
 const productsRoute=require('./routes/products');
 app.use('/products',productsRoute);
 
@@ -31,4 +31,4 @@ app.get('/', (req, res)=>{
 mongoose.connect(process.env.DB_CONNECTION, console.log('Connected to MongoDB!'));
 
 //Start listening to the server
-app.listen(3000); //Port number
+app.listen(4000); //Port number
