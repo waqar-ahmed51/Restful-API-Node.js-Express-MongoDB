@@ -28,7 +28,7 @@ app.get('/', (req, res)=>{
 });
 
 //Connecting to Mongodb - Cloud path is in .env file
-mongoose.connect(process.env.DB_CONNECTION, console.log('Connected to MongoDB!'));
+mongoose.connect("mongodb+srv://waqar:wa12345@cluster0.avpoiob.mongodb.net/?retryWrites=true&w=majority", console.log('Connected to MongoDB!'));
 
 //Start listening to the server
 app.listen(4000); //Port number
